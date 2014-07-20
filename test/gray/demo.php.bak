@@ -1,0 +1,16 @@
+<?php
+/**
+ * this is a demo for php fork and pipe usage. fork use
+ * to create child process and pipe is used to sychoroize
+ * the child process and its main process.
+ * @author bourneli
+ * @date: 2012-7-6
+ */
+
+define("PC",10); // 进程个数
+define("TO",4); // 超时
+define("TS",4); // 事件跨度，用于模拟任务延时
+
+if (!function_exists('pcntl_fork')) {
+    die("pcntl_fork not existing");
+}

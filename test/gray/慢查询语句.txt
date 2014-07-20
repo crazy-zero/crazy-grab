@@ -1,0 +1,82 @@
+
+select so.p_order_sn as order_sn,
+       so.create_time,
+       o.pay_time,
+       so.pay_status,
+       o.pay_name,
+       so.shipping_status,
+       so.shipping_time,
+       so.invoice_no,
+       so.shipping_name,
+       (case when o.type= 0 then(
+select send_type
+  from 16860_goods g
+ where g.id= og.goods_id) when o.type in (3, 4) then(
+select send_type
+  from 16860_special_goods sg
+ where sg.id= og.goods_id) when o.type in (1, 2) then(
+select send_type
+  from 16860_seckill_goods scg
+ where scg.id= og.goods_id) end) as send_type,
+       ei.express_message,
+       ei.sign_time,
+       so.confirm_time,
+       (case when o.type= 0 then(
+select sell_type
+  from 16860_goods g
+ where g.id= og.goods_id) when o.type in (3, 4) then(
+select sell_type
+  from 16860_special_goods sg
+ where sg.id= og.goods_id) when o.type in (1, 2) then(
+select sell_type
+  from 16860_seckill_goods scg
+ where scg.id= og.goods_id) end) as sell_type,
+       so.type,
+       (case when o.type= 0 then(
+select category_id
+  from 16860_goods g
+ where g.id= og.goods_id) when o.type in (3, 4) then(
+select category_id
+  from 16860_special_goods sg
+ where sg.id= og.goods_id) else '' end) as category,
+       og.goods_id,
+       og.goods_name,
+       og.goods_number,
+       og.shopping_price,
+       og.goods_price,
+       og.deposit,
+       og.goods_number*og.goods_price as goods_amount,
+       us.real_name as buyer_name,
+       o.real_name,
+       o.mobile,
+       (
+select reginal_head
+  from 16860_staff_reginal
+ where id= us.reginal_id) as reginal_head,
+       (
+select name
+  from 16860_region
+ where id= o.province) as province,
+       (
+select name
+  from 16860_region
+ where id= o.city) as city,
+       (
+select name
+  from 16860_region
+ where id= o.district) as district,
+       us.team,
+       o.address,
+       su.company,
+       su.relate_name,
+       su.mobile as smobile,
+       su.user_id as management_id,
+       (
+select username
+  from 16860_user u
+ where u.id= so.user_id) as username,
+       og.market_price,
+       og.opening_price,
+       og.color,
+       og.size
+  from 16860_order_goods og LEFT JOIN 16860_supplier_order so ON og.supplier_order_id= so.id LEFT JOIN 16860_order o ON o.id= so.pid LEFT JOIN 16860_express_info ei ON so.id= ei.order_id LEFT JOIN 16860_user_staff us ON o.user_id= us.uid

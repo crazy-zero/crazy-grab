@@ -1,0 +1,10 @@
+
+{"jingdong_ware_product_catelogy_list_get_responce":
+{"code":"0","productCatelogyList":
+{"catelogyList":[
+{"cid":9193,"description":"改善睡眠/缓解疲...","fid":9192,"icon":"http://img30.360buyimg.com/mobilecms/g13/M05/0B/06/rBEhUlIxiQ0IAAAAAAAOC9HJOwoAADFUgP-nuUAAA4j231.png","level":1,"name":"营养健康","orderSort":1},
+{"cid":9194,"description":"左旋肉碱/番茄红...","fid":9192,"icon":"http://img30.360buyimg.com/mobilecms/g13/M05/0B/06/rBEhUlIxiQ0IAAAAAAAOC9HJOwoAADFUgP-nuUAAA4j231.png","level":1,"name":"营养成分","orderSort":2},
+{"cid":9195,"description":"冬虫夏草/药食同...","fid":9192,"icon":"http://img30.360buyimg.com/mobilecms/g13/M05/0B/06/rBEhUlIxiQ0IAAAAAAAOC9HJOwoAADFUgP-nuUAAA4j231.png","level":1,"name":"传统滋补","orderSort":3},
+{"cid":9196,"description":"安全避孕/验孕测...","fid":9192,"icon":"http://img30.360buyimg.com/mobilecms/g13/M05/0B/06/rBEhUlIxiQ0IAAAAAAAOC9HJOwoAADFUgP-nuUAAA4j231.png","level":1,"name":"成人用品","orderSort":4},
+{"cid":9197,"description":"养生器械/中医保...","fid":9192,"icon":"http://img30.360buyimg.com/mobilecms/g13/M05/0B/06/rBEhUlIxiQ0IAAAAAAAOC9HJOwoAADFUgP-nuUAAA4j231.png","level":1,"name":"保健器械","orderSort":5},
+{"cid":12190,"description":"跌打损伤/防裂抗...","fid":9192,"icon":"http://img30.360buyimg.com/mobilecms/g13/M05/0B/06/rBEhUlIxiQ0IAAAAAAAOC9HJOwoAADFUgP-nuUAAA4j231.png","level":1,"name":"急救卫生","orderSort":7}],"resultCode":200}}}
